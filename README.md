@@ -1,20 +1,52 @@
-# DPOrganizer React Boilerplate
+# Memory Game
 
-[![Build Status](https://travis-ci.org/DPOrganizer/react-boilerplate.svg?branch=master)](https://travis-ci.org/DPOrganizer/react-boilerplate)
+This is a very simple Memory Game. This is currently in development, Please find introduced and pending features in description below.
 
-This is a very simple React boilerplate setup. It includes a basic starting point which you can start building from.
+This application is being developed using Node/React/Redux technologies.
 
-## Requirements
+Author - Harshit Gupta & Shubham Gupta
 
-Install `yarn`, read how [here](https://yarnpkg.com/en/docs/install).
+Flow of the game -
 
-## Installation
+User will click on play and he will get two deck of cards
+First one will get data from getchars API
+Second deck will get data from shuffle API using the response from the first API call.
 
-Run the following commands:
+User will click a card and  this will flip the card and display the value fetched from response of the getalphabet API.
 
-1. `git clone git@github.com:DPOrganizer/react-boilerplate.git`
-2. `cd react-boilerplate`
-3. `yarn install`
+A piar of click on each deck will increement the move value.
+
+Components ->
+
+1. App Component -> Smart Component
+	a. Header
+	b. LeaderBoard - Dynamic Component
+	
+2. Card Component -> Dumb Component
+	-- Only for rendering 
+	
+Services - 
+
+1. Call to getchars - Successful
+2. Call to shuffle - 
+3. Call to getAlphabet - Successful
+
+External tools used
+
+-- Redux
+-- Redux middleware for consuming  external APIs
+
+Funtionality Completed - 
+
+- UI of application
+- Data from getchars API and getalphabet API
+- Partial Logic
+
+Functionality Reamining -
+
+- Data from shuffle API in the second deck
+- Partial Logic
+- Session storage of leaderboard values in server side.
 
 To start the application you can now run: `yarn start`
 
@@ -27,3 +59,4 @@ To start the application you can now run: `yarn start`
 - `yarn start` Run the development environment
 - `yarn deploy` Build the application in production mode
 - `yarn deploy-windows` Build the application in production mode under Windows
+
